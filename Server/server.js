@@ -16,7 +16,6 @@ app.get("/services", async (req, res) => {
 
 app.post("/postservices", async (req, res) => {
     try{
-        const {service_name} = req.body;
         console.log(req.body)
         const newService = await pool.query(
             "INSERT INTO service (service_name) VALUES($1)",
