@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <Home />
+    <NavBar/>
+    <router-view/>
     
   </div>
 </template>
 
 <script>
 
-import  Home  from "./components/Home";
+
+import NavBar from "./components/NavBar";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
   name: 'App',
   components: {
-    Home
+  NavBar
   }
 }
 </script>

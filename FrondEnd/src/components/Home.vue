@@ -1,18 +1,26 @@
 <template>
     <div>
+        <Carousel/>
         <h1>Hello World</h1>
-        <Scheduler/>
+        
+    <div id="trial">
+        <h1>{{product}}</h1>
     </div>
+    </div>
+
+
 </template>
 
 <script>
 
-import Scheduler from "./scheduler";
+import Carousel from "./Carousel";
+
 
 export default {
     name: "Home",
     components: {
-        Scheduler
+        Carousel
+      
     }
    
 }
