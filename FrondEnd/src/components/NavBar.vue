@@ -1,7 +1,8 @@
 <template>
     <div>
+          <Header/>
   <b-navbar class="navBar" toggleable="lg" type="dark" variant="dark" bg-variant="#a82200">
-    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+    <!-- <b-navbar-brand href="#">NavBar</b-navbar-brand> -->
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -9,9 +10,9 @@
       <b-navbar-nav>
           <b-nav-item href="/">Home</b-nav-item>
         <b-nav-item href="/helloworld">Services</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        <b-nav-item href="/meetBrett" >Your Handyman</b-nav-item>
       </b-navbar-nav>
-
+      
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-form>
@@ -42,10 +43,13 @@
 
 <script>
 
-
+import Header from "./Header";
 
 export default {
-     name: "NavBar"
+     name: "NavBar",
+    components :{
+            Header
+    }
 }
 </script>
 

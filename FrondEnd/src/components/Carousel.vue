@@ -19,16 +19,20 @@
         caption="First slide"
         style="height: 500px; "
         text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://images.unsplash.com/photo-1567361808960-dec9cb578182?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1071&q=80"
+        img-src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg"
       ></b-carousel-slide>
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
+      <b-carousel-slide
+        style="height: 500px;"
+       img-src="https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg">
         <h1>Hello world!</h1>
       </b-carousel-slide>
 
       <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
+      <b-carousel-slide
+        style="height: 500px; "
+       img-src="https://images.pexels.com/photos/175039/pexels-photo-175039.jpeg"></b-carousel-slide>
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
@@ -37,15 +41,17 @@
           <img
             class="d-block img-fluid w-100"
             width="1024"
-            height="480"
-            src="https://picsum.photos/1024/480/?image=55"
+            style="height: 500px; object-fit: cover;"
+            src="https://images.pexels.com/photos/589/garden-grass-meadow-green.jpg"
             alt="image slot"
           >
         </template>
       </b-carousel-slide>
 
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+      <b-carousel-slide
+        style="height: 500px"
+       caption="Blank Image" img-src="https://images.pexels.com/photos/1571736/pexels-photo-1571736.jpeg" img-alt="Blank image">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
           a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
@@ -62,6 +68,7 @@
   export default {
     data() {
       return {
+        publicPath: process.env.BASE_URL,
         slide: 0,
         sliding: null
       }
