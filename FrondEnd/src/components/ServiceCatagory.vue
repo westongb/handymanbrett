@@ -2,9 +2,12 @@
     <div>
         <b-container class="bv-example-row">
             <b-row>
-                <b-col class="serviceType1" ><div class="serviceText"><h4>Meet Your Handyman</h4><p>A short decription of what is going on</p></div></b-col>
-                <b-col class="serviceType2"><div class="serviceText"><h4>Customer Reviews</h4><p>A short decription of what is going on</p></div></b-col>
-                <b-col class="serviceType3"><div class="serviceText"><h4>Type of service</h4><p>A short decription of what is going on</p></div></b-col>
+                <b-col class="serviceType1" ><a href="/meetBrett"><div class="serviceText"><h4>Service Type1</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType2"><a href="/meetBrett"><div class="serviceText"><h4>Service type 2</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType3"><a href="/helloworld"><div class="serviceText"><h4>Service type 3</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                 <b-col class="serviceType1" ><a href="/meetBrett"><div class="serviceText"><h4>Service Type1</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType2"><a href="/meetBrett"><div class="serviceText"><h4>Service type 2</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType3"><a href="/helloworld"><div class="serviceText"><h4>Service type 3</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
                 
             </b-row>
         </b-container>
@@ -33,90 +36,107 @@ export default {
 
 <style>
 .serviceType1 {
-    background-image: url("../assets/rsz_handyman_brett.jpg");
+    background-image: url("../assets/handtools5.jpg");
   background-repeat: no-repeat;
-  background-size: 120%;
-    height: 300px;
+  background-size: 300%;
+   background-position: center;
+    height: 150px;
     border-radius: 205px;
     margin: 20px;
-    width: 300px;
+    width: 150px;
     align-items: center;
     
 }
 
 .serviceType1:hover {
-   background-color: blanchedalmond;
- background-image: url();
+ background-image: url("../assets/abstract-antique-backdrop-background-129731.jpg");
+ background-size: auto;
       -webkit-transition: all 0s ease-in-out;
 }
 
 .serviceType1:hover .serviceText {
     opacity: 2;
 
-     -webkit-transition: all .5s ease-in-out;
+     -webkit-transition: all 0s ease-in-out;
 }
 
 
 .serviceType2 {
     background-image: url("../assets/johan-godinez-dDYRYivNzbI-unsplash.jpg");
+      background-position: center;
   background-repeat: no-repeat;
   background-size: 120%;
-    height: 300px;
+    height: 150px;
     border-radius: 205px;
     margin: 20px;
-    width: 300px;
+    width: 150px;
     align-items: center;
     
 }
 
 .serviceType2:hover {
-    background-color: blanchedalmond;
- background-image: url();
+    background-image: url("../assets/abstract-antique-backdrop-background-129731.jpg");
+    background-size: auto;
       -webkit-transition: all 0s ease-in-out;
 }
 
 .serviceType2:hover .serviceText {
     opacity: 2;
 
-     -webkit-transition: all .5s ease-in-out;
+     -webkit-transition: all 0s ease-in-out;
 }
 
 
 .serviceType3 {
     background-image: url("../assets/jacek-dylag-Vve7XkiUq_Y-unsplash.jpg");
+    
   background-repeat: no-repeat;
   background-size: 120%;
-    height: 300px;
+    height: 150px;
     border-radius: 205px;
     margin: 20px;
-    width: 300px;
+    width: 150px;
     align-items: center;
 
     
 }
 
 .serviceType3:hover {
-    background-color: blanchedalmond;
- background-image: url();
+    background-image: url("../assets/abstract-antique-backdrop-background-129731.jpg");
+ /* background-image: url(); */
+ background-size: auto;
       -webkit-transition: all 0s ease-in-out;
 }
 
 .serviceType3:hover .serviceText {
     opacity: 2;
 
-     -webkit-transition: all .5s ease-in-out;
+     -webkit-transition: all 0s ease-in-out;
 }
 
 
 
 .serviceText{
-    margin-top: 40%;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 75%;
+    margin-right: auto;
+    justify-content: center;
     align-items: center;
     color: black;
     opacity: 0;
      position: absolute;
+     margin-left: auto;
 }
 
+h4{
+    font-size: 100%;
+}
+
+.serviceDesc{
+    font-size: 70%;
+}
 
 
 

@@ -1,16 +1,16 @@
 <template>
-    <div>
+    <div class="navBar">
           <Header/>
-  <b-navbar class="navBar" toggleable="lg" type="dark" variant="dark" bg-variant="#a82200">
+  <b-navbar class="navBar" toggleable="lg"  bg-variant="#a82200">
     <!-- <b-navbar-brand href="#">NavBar</b-navbar-brand> -->
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-          <b-nav-item href="/">Home</b-nav-item>
-        <b-nav-item href="/helloworld">Services</b-nav-item>
-        <b-nav-item href="/meetBrett" >Your Handyman</b-nav-item>
+          <b-nav-item class="linkText" href="/">Home</b-nav-item>
+        <b-nav-item class="linkText" href="/Services">Services</b-nav-item>
+        <b-nav-item class="linkText" href="/meetBrett" >Your Handyman</b-nav-item>
       </b-navbar-nav>
       
       <!-- Right aligned nav items -->
@@ -54,7 +54,15 @@ export default {
 </script>
 
 <style scoped>
-#navBar{
-    background-color: brown;
+.navBar{
+    background-image: url("../assets/abstract-antique-backdrop-background-129731.jpg");
+    z-index: 2;
 }
+
+.linkText{
+  color: rgb(26, 42, 42);
+  font-weight: bold;
+}
+
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="headerBar">
         <div>
          
             <ul class="headerGroup">
@@ -61,14 +61,22 @@ export default {
 </script>
 
 <style>
+.headerBar{
+    z-index: 3;
+    position: sticky;
+    top: 0;
+    margin-top: -50px;
+}
+
 .headerGroup{
     display: flex;
-    background-color:#343a40 ;
+    background-image: url("../assets/abstract-antique-backdrop-background-129731.jpg");
     padding-top: 20px;
     width: 100%;
     padding-bottom: -10px;
     margin-bottom: 0px;
-    justify-content: space-around;
+    justify-content: space-around; 
+    z-index: 2;
 }
 
 .iconImage{
@@ -79,17 +87,26 @@ export default {
     display: flex;
     height: 80px;
     border-width: .002em;
-    border: solid  white;
+    border: solid  darkslategray;
     padding: 2px;
     padding-right: 6px;
-    background-color: #343a40 ;
+   background-image: url("../assets/abstract-antique-backdrop-background-129731.jpg");
     align-items: center;
     justify-self: center;
     border-radius: 10px;
     }
 
+.headerList:hover{
+    background-color: brown;
+     background-image: url();
+}
+
+.headerList:hover .headerText{
+    color: wheat;
+}
+
 .headerText{
-    color: white;
+    color: darkslategray;
     font-size: .8em;
     margin-left: 5px;
 }

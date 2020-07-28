@@ -46,13 +46,15 @@ app.post("/postservices", async (req, res) => {
     
     try{
         console.log(req.body);
-        const service_name = req.body.service_name;
+        const service_type = req.body.serviceType
+        const service_name = req.body.serviceName;
         const job_time = req.body.job_time;
-        const price = req.body.price;
+        const estimated_price = req.body.price;
+        const service_description = req.body.description
         // const data = JSON.stringify([service_name, job_time, price])
         const newService = await client.query(
-            "INSERT INTO brett_services (service_name, job_time, price) VALUES ($1, $2, $3)" , 
-            [service_name, job_time, price]);
+            "INSERT INTO brett_services (service_type, service_name, job_time, estimated_price,  service_description) VALUES ($1, $2, $3, $4, $5)" , 
+            [service_type, service_name, job_time, estimated_price, service_description]);
        await res.json(newService)
     } catch (err){
         console.log(err.message)
