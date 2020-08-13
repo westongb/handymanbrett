@@ -1,10 +1,10 @@
 <template>
 <div class="quoteform">
     <h1>Get a Quote</h1>
-  <form class="contact-form" @submit.prevent="sendForm">
+  <form class="contact-form" @submit.prevent="submit">
     <label>Name</label>
     <input type="text" 
-    value= e.target.name
+
     name="from_name"
     v-model="form.to_name"
      class="input"
@@ -13,14 +13,12 @@
     <label>Email</label>
     <input type="email" 
     name="reply_to"
-    value= e.target.name
     v-model="form.reply_to"
      class="input"
     >
      <br/>
     <label class="textAreaLabel">Message</label>
     <textarea name="message"
-    value= e.target.name
     v-model="form.message"
     class="messageLabel"
     rows="4"
@@ -72,7 +70,7 @@ export default {
 
   methods: {
 
-     resetform (e)  {
+     submit ()  {
         //  var   template_params= {
         // "reply_to": this.email,
         // "name": this.name,
@@ -80,9 +78,9 @@ export default {
         // "html": this.html
         //     }
       
-        e.preventDefault()
-        console.log(e.target)
-        emailjs.sendForm('gmail', 'template_RZenTIyl', e.target, 'user_MATCgaEeoHw119UWC9Txw')
+        event.preventDefault()
+        console.log(this.form.message)
+        emailjs.send('gmail', 'template_RZenTIyl', {reply_to : this.form.reply_to, html: this.form.message, name: this.form.name }, 'user_MATCgaEeoHw119UWC9Txw')
         .then((result) => {
             console.log('SUCCESS!', result.status, result.text);
         }, (error) => {
