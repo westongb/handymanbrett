@@ -18,8 +18,10 @@
                     </button>
                 </li>
                  <li >
+                     
                     <button class="headerList">
-                        <a  href="#Getquote">
+                        
+                        <a  href="\quote">
                         <!-- <img class="iconImage" src="https://cdn0.iconfinder.com/data/icons/pixel-perfect-at-24px-volume-3/24/5046-512.png"/> -->
                         <b-icon icon="calendar" class="h1 mb-2"></b-icon>
                         <div>
@@ -55,12 +57,16 @@
 import Vue from 'vue'
 import { BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
+import getQuote from "./Getquote"
 
 Vue.use(BootstrapVueIcons)
 
 export default {
     name: "Header",   
 
+    component:{
+        getQuote
+    },
 
 }
 </script>

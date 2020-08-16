@@ -22,7 +22,11 @@
         <Reviews/>
     </div>
     <div class="quote" id="Getquote">
-        <GetQuote/>
+        <div>
+
+   <GetQuote/>
+</div>
+      
     </div>
     <div class="footer">
 

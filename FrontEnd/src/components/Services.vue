@@ -37,19 +37,19 @@ and restore when they have failed and need replacement.!</b-card>
   <Electrical/>
   
   </div>
-  <AddServices/>
+  <!-- <AddServices/> -->
 </div>
 </template>
 
 <script>
 
-import AddServices from "./AddService";
+// import AddServices from "./AddService";
 import Electrical from './services/Electrical';
 
 export default {
   name: 'Services',
      components: {
-          AddServices,
+          // AddServices,
           Electrical
        },
  data:function (){
@@ -85,7 +85,6 @@ export default {
         "price": this.servicePrice,
         "description": this.serviceDescription,
         "img": this.serviceImg
-
 
             }
           )
@@ -128,7 +127,7 @@ a {
   flex-direction: column;
   justify-content: space-around;
   width: 70%;
-  height: 1000px;
+ 
 
 }
 

@@ -2,12 +2,12 @@
     <div>
         <b-container class="bv-example-row">
             <b-row>
-                <b-col class="serviceType1" ><a href="/meetBrett"><div class="serviceText"><h4>Service Type1</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
-                <b-col class="serviceType2"><a href="/meetBrett"><div class="serviceText"><h4>Service type 2</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
-                <b-col class="serviceType3"><a href="/helloworld"><div class="serviceText"><h4>Service type 3</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
-                 <b-col class="serviceType4" ><a href="/meetBrett"><div class="serviceText"><h4>Service Type1</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
-                <b-col class="serviceType5"><a href="/meetBrett"><div class="serviceText"><h4>Service type 2</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
-                <b-col class="serviceType6"><a href="/helloworld"><div class="serviceText"><h4>Service type 3</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType1" ><a href="/Services"><div class="serviceText"><h4>Service Type1</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType2"><a href="/Services"><div class="serviceText"><h4>Service type 2</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType3"><a href="/Services"><div class="serviceText"><h4>Service type 3</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                 <b-col class="serviceType4" ><a href="/Services"><div class="serviceText"><h4>Service Type1</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType5"><a href="/Services"><div class="serviceText"><h4>Service type 2</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType6"><a href="/Services"><div class="serviceText"><h4>Service type 3</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
                 
             </b-row>
         </b-container>
