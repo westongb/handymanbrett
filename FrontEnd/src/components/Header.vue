@@ -10,8 +10,8 @@
                     <button  class="headerList"><a href="tel:+1-801-643-6574">
                         <img class="iconImage" src="https://cdn0.iconfinder.com/data/icons/pixel-perfect-at-24px-volume-3/24/5046-512.png"/>
                         <div>
-                        <h4 class="headerText">801-643-6574</h4>
-                        <h4 class="headerText">Give me a call or send a text</h4>
+                        <h4 class="headerText detail" >801-643-6574</h4>
+                        <h4 class="headerText detail">Give me a call or send a text</h4>
                        
                     </div>
                     </a>
@@ -26,7 +26,7 @@
                         <b-icon icon="calendar" class="h1 mb-2"></b-icon>
                         <div>
                         <h4 class="headerText">Get A Quote</h4>
-                        <h4 class="headerText">Let me know what you need!</h4>
+                        <h4 class="headerText detail">Let me know what you need!</h4>
                        
                     </div>
                         </a>
@@ -35,10 +35,10 @@
                  <li >
                     <button href="#" class="headerList">
                         <a href = "mailto: abc@example.com">
-                        <b-icon icon="inbox" class="h1 mb-2"></b-icon>
+                        <b-icon icon="envelope" class="h1 mb-2"></b-icon>
                         <div>
-                        <h4 class="headerText">brettEmail@email.com</h4>
-                        <h4 class="headerText">Send me and email</h4>
+                        <h4 class="headerText detail">brettEmail@email.com</h4>
+                        <h4 class="headerText detail">Send me and email</h4>
                   
                     </div>
                         </a>
@@ -88,6 +88,7 @@ export default {
     margin-bottom: 0px;
     justify-content: space-around; 
     z-index: 2;
+    list-style-type: none;
 }
 
 .iconImage{
@@ -127,8 +128,31 @@ export default {
 }
 
 .calenderIcon{
-    height: 50px;
+    height: 30px;
 
+}
+
+@media only screen and (max-width: 800px) {
+
+.detail{
+    /* display: none; */
+}
+
+.logo{
+    width: 150px;
+    margin-left: -20px;
+}
+
+.headerList{
+    margin-right: 10px;
+}  
+}
+
+
+@media only screen and (max-width: 650px) {
+.detail{
+    display: none;
+}
 }
 </style>
 

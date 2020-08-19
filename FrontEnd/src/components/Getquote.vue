@@ -22,6 +22,10 @@
     <label>Email</label>
 
     <b-form-input :type="email" v-model="form.reply_to" placeholder="Enter your Email"  name="reply_to"  
+          ></b-form-input>
+          <br/>
+    <label>Phone number</label>
+    <b-form-input :type="phone" v-model="form.phone_number" placeholder="Best number to reach you at"  name="phoneNumber"  
      
      ></b-form-input>
     <!-- <input type="email" 
@@ -50,11 +54,8 @@
     rows="4"
     ></b-form-textarea>
      <br/>
-    <input type="submit" 
-    value="Send"
-    
-    >
-
+      <b-button @click="submit" value="Send" block variant="success">Submit Quote Request</b-button>
+   
      </div>
   </form>
 
@@ -88,6 +89,7 @@ export default {
             to: 'westongb@gmail.com',
              Subject: "Trial Email",
              from_name: "",
+             phone_number: "",
               serviceType: "",
             reply_to: "",
              serviceDetailed: "",
@@ -131,8 +133,8 @@ export default {
         //     }
       
         event.preventDefault()
-        console.log(this.form.message)
-        emailjs.send('gmail', 'template_RZenTIyl', {reply_from : this.form.reply_to, html: this.form.message, from_name: this.form.from_name, service_Type: this.form.serviceType, service_detail: this.form.serviceDetailed }, 'user_MATCgaEeoHw119UWC9Txw')
+        console.log(this.form.phone_number)
+        emailjs.send('gmail', 'template_RZenTIyl', {reply_from : this.form.reply_to, html: this.form.message, from_name: this.form.from_name, service_Type: this.form.serviceType, service_detail: this.form.serviceDetailed, phone_Number: this.form.phone_number }, 'user_MATCgaEeoHw119UWC9Txw')
         .then((result) => {
             console.log('SUCCESS!', result.status, result.text);
         }, (error) => {

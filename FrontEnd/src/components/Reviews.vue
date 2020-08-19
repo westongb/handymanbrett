@@ -2,29 +2,34 @@
     <div class="Reviews">
         <h1>Reviews</h1>
         <div class="reviewsTable">
-            <table class="Table">
-                <tr>
-                    <td><img class="reviewImage" :src="person1"/></td>
-                        <td><img class="reviewImage" :src="person2"/></td>
-                          <td><img class="reviewImage" :src="person3"/></td>
-                </tr>
-                <tr>
-                    <td><h3>Review 1</h3></td>
-                      <td><h3>Review 2</h3></td>
-                        <td><h3>Review 3</h3></td>
-                </tr>
-                <tr>
-                    <td>If you haven't seen Game of Thrones, go watch it right now. If you have 
+            <div class="Table">
+                <div class="reviews">
+                    <div class="review one">
+                    <div class="review-title" ><h3>Review 1</h3></div>
+                     <div><img class="reviewImage" :src="person1"/></div>
+                    
+                    <div class="reviewText">If you haven't seen Game of Thrones, go watch it right now. If you have 
                         then you'll totally get why this Hodor themed lorem ipsum generator is 
-                        just brilliant.</td>
-                     <td>If you haven't seen Game of Thrones, go watch it right now. If you have 
+                        just brilliant.</div>
+                    </div> 
+                    <div class="review two">
+                          <div class="review-title"><h3>Review 2</h3></div>
+                        <div><img class="reviewImage" :src="person2"/></div>
+                   
+                    <div class="reviewText">If you haven't seen Game of Thrones, go watch it right now. If you have 
                         then you'll totally get why this Hodor themed lorem ipsum generator is 
-                        just brilliant.</td>
-                    <td>If you haven't seen Game of Thrones, go watch it right now. If you have 
+                        just brilliant.</div>
+                    </div>
+
+                    <div class="review three">
+                        <div class="review-title"><h3>Review 3</h3></div>
+                         <div><img class="reviewImage" :src="person3"/></div>
+                    <div class="reviewText">If you haven't seen Game of Thrones, go watch it right now. If you have 
                         then you'll totally get why this Hodor themed lorem ipsum generator is 
-                        just brilliant.</td>
-                </tr>
-            </table>
+                        just brilliant.</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -58,22 +63,96 @@ export default {
     object-fit: cover;
 }
 
-.Reviews{
+.reviews{
+     display: flex;
     margin-top: 100px;
     margin-bottom: 100px;
     z-index: 2;
-  
-}
-
-.reviewsTable{
-   text-align: center;
-   z-index: 2;
-   padding-top: 50px;
 }
 
 .Table{
-   width: 70%;
-   margin: auto;
-    z-index: 2;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.review{
+    width: 30%;
+    margin: 0px 10px 10px;
+    justify-content: center;
+}
+
+.reviewText{
+    width: 300px;
+    margin: auto;
+}
+
+@media only screen and (min-width: 1250px) {
+    .reviewText{
+    width: 250px;
+    margin: auto;
+}
+
+}
+
+@media only screen and (max-width: 1080px) {
+    .reviewText{
+    width: 200px;
+    margin: auto;
+}
+
+.review-title{
+   width: 300px;
+   margin-left: 0px;
+}
+
+}
+
+@media only screen and (max-width: 900px) {
+  .reviews{
+      flex-direction: column;
+     margin: 0px 150px 0px 0px;
+      align-items: center;
+  }
+
+  .reviewImage{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.reviewText{
+    width: 300px;
+    margin: auto;
+}
+
+
+}
+
+@media only screen and (max-width: 650px) {
+  .reviews{
+      flex-direction: column;
+     margin: 0px 150px 0px 0px;
+      align-items: center;
+  }
+
+  .reviewImage{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.reviewText{
+    width: 250px;
+    margin-left: -20px;
+   
+}
+
+.review-title{
+   width: 250px;
+   margin-left: -20px;
+}
+
+
+
 }
 </style>

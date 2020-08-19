@@ -75,7 +75,7 @@ export default {
 }
 
 .sectionSpace{
-    height: 100px;
+    height: 20px;
 }
 
 .site{
@@ -100,6 +100,7 @@ export default {
 
 .quote{
     width: 50%;
+    height: 700px;
     border: solid black;
     display: flex;
     justify-content: center;

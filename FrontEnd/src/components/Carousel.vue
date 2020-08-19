@@ -19,13 +19,13 @@
         caption="First slide"
         style="height: 500px; "
         text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg"
+        :img-src="image1"
       ></b-carousel-slide>
 
       <!-- Slides with custom text -->
       <b-carousel-slide
         style="height: 500px;"
-       img-src="https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg">
+       :img-src="image2">
         <h1>Hello world!</h1>
       </b-carousel-slide>
 
@@ -64,13 +64,17 @@
 
 <script>
 
+  import toolsImage1 from "../assets/neonbrand-SiYxQRATT2M-unsplash.jpg"
+  import toolsImage2 from "../assets/person-holding-pencil-1388944.jpg"
 
   export default {
     data() {
       return {
         publicPath: process.env.BASE_URL,
         slide: 0,
-        sliding: null
+        sliding: null,
+        image1: toolsImage1,
+        image2: toolsImage2
       }
     },
     // methods: {

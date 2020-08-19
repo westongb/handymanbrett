@@ -99,4 +99,19 @@ export default {
     height: 2px;
 }
 
+@media only screen and (max-width: 1080px)
+{
+    .brettDescription{
+        display: inline;
+        
+    }
+}
+
+@media only screen and (max-width: 780px)
+{
+.brettImage{
+    height: 300px;
+}
+}
+
 </style>
