@@ -11,7 +11,9 @@
     </div> 
   
     <div class="sectionSpace"></div>
+    <div class="services">
         <ServiceCatagory/>
+    </div>
     <div id="trial">
         <h1>{{product}}</h1>
     </div>
@@ -52,9 +54,6 @@ export default {
         Reviews,
         GetQuote
     }
-       
-    
-   
 }
 
 
@@ -78,8 +77,11 @@ export default {
     height: 20px;
 }
 
-.site{
-
+.services{
+    width: 100%;
+     align-content: center;
+     margin-left: 3%;
+     margin-right: 3%;
     
 }
 

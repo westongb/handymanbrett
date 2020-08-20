@@ -1,6 +1,6 @@
 <template>
     <div class="Reviews">
-        <h1>Reviews</h1>
+        <h1 class="title">Reviews</h1>
         <div class="reviewsTable">
             <div class="Table">
                 <div class="reviews">
@@ -65,7 +65,7 @@ export default {
 
 .reviews{
      display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 100px;
     z-index: 2;
 }
@@ -84,6 +84,10 @@ export default {
 .reviewText{
     width: 300px;
     margin: auto;
+}
+
+.title{
+    font-size: 500%;
 }
 
 @media only screen and (min-width: 1250px) {

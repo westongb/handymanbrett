@@ -1,20 +1,20 @@
 <template>
-    <div>
-        <b-container class="bv-example-row">
-            <b-row class="serviceCatagory">
-                <b-col class="serviceType1" ><a href="/Services"><div class="serviceText"><h4>Electrical</h4><p class="serviceDesc">Lighting, appliances and outlets</p></div></a></b-col>
-                <b-col class="serviceType2"><a href="/Services"><div class="serviceText"><h4>Interior</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
-                <b-col class="serviceType3"><a href="/Services"><div class="serviceText"><h4>Landscaping</h4><p class="serviceDesc">Get your yard looking the way you want</p></div></a></b-col>
-                 <b-col class="serviceType4" ><a href="/Services"><div class="serviceText"><h4>Furnature</h4><p class="serviceDesc">Let us put together your new furnature</p></div></a></b-col>
-                <b-col class="serviceType5"><a href="/Services"><div class="serviceText"><h4>Plumbing</h4><p class="serviceDesc">Got issues with your pipes. We can do that.</p></div></a></b-col>
-                <b-col class="serviceType6"><a href="/Services"><div class="serviceText"><h4>Odd Jobs</h4><p class="serviceDesc">Not sure how to describe your issue? Let us help.</p></div></a></b-col>
-                
+    <div class="service">
+        <h1>Types of Service Offered</h1>
+        <b-container class="justify-content-md-center" fluid >
+            <b-row class="serviceCatagory" >
+                <b-col class="serviceType1" md="auto" ><a href="/Services"><div class="serviceText"><h4>Electrical</h4><p class="serviceDesc">Lighting, appliances and outlets</p></div></a></b-col>
+                <b-col class="serviceType2" md="auto"><a href="/Services"><div class="serviceText"><h4>Interior</h4><p class="serviceDesc">A short decription of what is going on</p></div></a></b-col>
+                <b-col class="serviceType3" md="auto"><a href="/Services"><div class="serviceText"><h4>Landscaping</h4><p class="serviceDesc">Get your yard looking the way you want</p></div></a></b-col>
+                 <b-col class="serviceType4" md="auto" ><a href="/Services"><div class="serviceText"><h4>Furnature</h4><p class="serviceDesc">Let us put together your new furnature</p></div></a></b-col>
+                <b-col class="serviceType5" md="auto"><a href="/Services"><div class="serviceText"><h4>Plumbing</h4><p class="serviceDesc">Got issues with your pipes. We can do that.</p></div></a></b-col>
+                <b-col class="serviceType6" md="auto"><a href="/Services"><div class="serviceText"><h4>Odd Jobs</h4><p class="serviceDesc">Not sure how to describe your issue? Let us help.</p></div></a></b-col>
             </b-row>
         </b-container>
     </div>
 </template>
 
-:style="{ backgroundImage: `url('${image}')` }"
+
 
 <script>
 
@@ -35,16 +35,20 @@ export default {
 </script>
 
 <style>
+
+
+
+
 .serviceType1 {
     background-image: url("../assets/HM light fixture repair.jpg");
     background-size:cover;
   background-repeat: no-repeat;
    background-size: 200%;
    background-position: center;
-    height: 150px;
+    height: 200px;
     border-radius: 100px;
-    margin: 2%;
-    width: 150px;
+    margin: 1%;
+    width: 200px;
     align-items: center;
     
 }
@@ -69,10 +73,10 @@ export default {
     background-size: cover;
   background-repeat: no-repeat;
      background-size: 200%;
-    height: 150px;
+    height: 200px;
     border-radius: 205px;
-    margin: 20px;
-    width: 150px;
+      margin: 1%;
+    width: 200px;
     align-items: center;
     
 }
@@ -97,10 +101,10 @@ export default {
  
   background-repeat: no-repeat;
     background-size: 200%;
-    height: 150px;
+    height: 200px;
     border-radius: 205px;
-    margin: 20px;
-    width: 150px;
+      margin: 1%;
+    width: 200px;
     align-items: center;
 
     
@@ -126,10 +130,10 @@ export default {
     background-size: cover;
   background-repeat: no-repeat;
       background-size: 200%;
-    height: 150px;
+    height: 200px;
     border-radius: 205px;
-    margin: 20px;
-    width: 150px;
+       margin: 1%;
+    width: 200px;
     align-items: center;
 
     
@@ -154,10 +158,10 @@ export default {
     
   background-repeat: no-repeat;
     background-size: 150%;
-    height: 150px;
+    height: 200px;
     border-radius: 205px;
-    margin: 20px;
-    width: 150px;
+     margin: 1%;
+    width: 200px;
     align-items: center;
 
     
@@ -183,10 +187,10 @@ export default {
       background-size: 150%;
   background-repeat: no-repeat;
   
-    height: 150px;
+    height: 200px;
     border-radius: 205px;
-    margin: 20px;
-    width: 150px;
+     margin: 1%;
+    width: 200px;
     align-items: center;
 
     
@@ -206,39 +210,69 @@ export default {
      -webkit-transition: all 0s ease-in-out;
 }
 
-
+.service{
+    width: 90%;
+    margin: 0% 5% 0% 5%;
+}
 
 .serviceText{
     display: flex;
     flex-direction: column;
     height: 150px;
-    width: 75%;
-    margin-right: auto;
+    width: 85%;
+ 
     justify-content: center;
     align-items: center;
     color: brown;
     opacity: 0;
      position: absolute;
-     margin-left: auto;
+   
       text-shadow:2px 2px 10px white;
       font-weight: 900;
 }
 
 h4{
-    font-size: 110%;
+    font-size: 130%;
     text-decoration: underline;
     
 }
 
 .serviceDesc{
-    font-size: 90%;
+    font-size: 100%;
 }
 
-@media only screen and (max-width: 1080px){
-    .serviceCatagory{
-        display: flex;
-        flex-direction: column;
-    }
+@media only screen and (max-width: 880px){
+
+.serviceType1 {
+    border-radius: 50px;
+    width: 400px;
+
+}
+
+.serviceType2 {
+ border-radius: 50px;
+    width: 400px;
+}
+
+.serviceType3 {
+ border-radius: 50px;
+    width: 400px;
+}
+
+.serviceType4 {
+ border-radius: 50px;
+    width: 400px;
+}
+
+.serviceType5 {
+ border-radius: 50px;
+    width: 400px;
+}
+.serviceType6 {
+ border-radius: 50px;
+    width: 400px;
+}
+
 }
 
 </style>
