@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../components/Home.vue"
+import Home from "../components/Home.vue";
+import {uriBase} from "../const";
 
 
 Vue.use(VueRouter);
@@ -39,7 +40,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
+  base: uriBase,
   routes
 });
 

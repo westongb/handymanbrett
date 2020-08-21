@@ -17,6 +17,7 @@
 
 
 import Electrical from './services/Electrical';
+import {uriBase} from '../const';
 
 export default {
   name: 'Services',
@@ -38,7 +39,7 @@ export default {
         }
  },
    method: function postService (){
-        fetch('http://localhost:5000/postservices', {
+        fetch(`${uriBase}/postservices`, {
           method: "Post",
           body: JSON.stringify(
             {

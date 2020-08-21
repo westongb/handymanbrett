@@ -64,6 +64,7 @@
 <script>
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import {uriBase} from '../const';
 
 
   export default {
@@ -89,7 +90,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
         this.postService(this.form)
       },
         postService (){
-        fetch('http://localhost:5000/postservices', {
+        fetch(`${uriBase}/postservices`, {
           method: "Post",
           body: JSON.stringify(
             {

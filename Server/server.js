@@ -136,4 +136,12 @@ app.post("/send-email", async (req, res) => {
 });
 
 
+if(process.env.NODE_ENV === 'production') {
+  //Static folder
+  app.use(express.static(_dirname + '/public/'))
+}
+// handle SPA
+
+app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
