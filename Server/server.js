@@ -15,7 +15,7 @@ const client = new Client({
 
 }) 
 
-const staticFileMiddleware = express.static(path.join(__dirname + '/dist'))
+const staticFileMiddleware = express.static(path.join(__dirname + '/public'))
 
 const port = process.env.PORT || 5000;
 
@@ -30,11 +30,12 @@ client.connect().then(() => console.log('connected'))
 .finally(()=> client.end)
 
 
-app.use(serveStatic(path.join(__dirname, './public')));
+app.use(serveStatic(path.join(__dirname, '/public')));
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser());
 app.use(staticFileMiddleware);
+
 
 
 
@@ -100,7 +101,7 @@ async function readServices() {
 // }
 // handle SPA
 
-// app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
 
 
 
