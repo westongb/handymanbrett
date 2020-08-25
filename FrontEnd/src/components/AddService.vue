@@ -90,7 +90,7 @@ import {uriBase} from '../const';
         this.postService(this.form)
       },
         postService (){
-        fetch(`${uriBase}/postservices`, {
+        fetch(`${uriBase}/api/postservices`, {
           method: "Post",
           body: JSON.stringify(
             {

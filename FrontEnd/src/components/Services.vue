@@ -39,7 +39,7 @@ export default {
         }
  },
    method: function postService (){
-        fetch(`${uriBase}/postservices`, {
+        fetch(`${uriBase}/api/postservices`, {
           method: "Post",
           body: JSON.stringify(
             {

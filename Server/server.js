@@ -3,6 +3,8 @@ const {Pool, Client} = require('pg')
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-Parser");
+const serveStatic = require("serve-static");
+const path = require('path');
 const pool = new Pool();
 require('dotenv').config("./process.env")
 const client = new Client({
@@ -12,9 +14,11 @@ const client = new Client({
     database: "services"
 
 }) 
+
+const staticFileMiddleware = express.static(path.join(__dirname + '/dist'))
+
 const port = process.env.PORT || 5000;
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 
 var serviceList = require('./Service_list.json');
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require("constants");
@@ -25,10 +29,12 @@ client.connect().then(() => console.log('connected'))
 .catch(err => console.error('connection error', err.stack))
 .finally(()=> client.end)
 
+
+app.use(serveStatic(path.join(__dirname, './public')));
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser());
-
+app.use(staticFileMiddleware);
 
 
 
@@ -40,21 +46,21 @@ var config = {
 }
 
 
-app.get("/services", async (req, res) => {
+app.get("/api/services", async (req, res) => {
     const rows = await readServices();
     res.setHeader("content-type", "application/json")
     res.send(JSON.stringify(rows))
 })
 
 
-app.get("/servicelist", async (req, res) => {
+app.get("/api/Servicelist", async (req, res) => {
     
           res.send(JSON.stringify(serviceList))
 })
  
 
 
-app.post("/postservices", async (req, res) => {
+app.post("/api/postservices", async (req, res) => {
     console.log(req.body);
     try{
         
@@ -87,61 +93,15 @@ async function readServices() {
 }
 
 
-app.post("/send-email", async (req, res) => {
 
-    
-    const {
-        recipient,
-        message = "lets try doing a messaage and see if this actually sends",
-        name = "lets try this again",
-        sender
-
-    } = req.body;
-
-    console.log(recipient)
-
-
-
-    const msg = {
-        to: "westongb@outlook.com",
-        from: "westongb@outlook.com.com",
-        subject: name,
-        text: message,
-        html: `<strong>${message}</strong>`,
-      };
-
-      console.log(msg)
-      sgMail
-  .send(msg)
-  .then(() => {}, error => {
-    console.error(error);
- 
-    if (error.response) {
-      console.error(error.response.body)
-    }
-  });
-//ES8
-(async () => {
-  try {
-    await sgMail.send(msg);
-  } catch (error) {
-    console.error(error);
- 
-    if (error.response) {
-      console.error(error.response.body)
-    }
-  }
-    
-})
-});
-
-
-if(process.env.NODE_ENV === 'production') {
-  //Static folder
-  app.use(express.static(_dirname + '/public/'))
-}
+// if(process.env.NODE_ENV === 'production') {
+//   //Static folder
+//   app.use(express.static(_dirname + '/public/'))
+// }
 // handle SPA
 
-app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+// app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+
+
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

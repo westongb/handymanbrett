@@ -2,7 +2,7 @@
 const uriBase = process.env.NODE_ENV !== 'production' ? (
     "http://localhost:5000"
 ) : (
-    "https://king-of-the-kingdom.herokuapp.com"
+    "https://brettserver.herokuapp.com"
 )
 
 module.exports.uriBase = uriBase

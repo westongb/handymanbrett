@@ -112,7 +112,7 @@ export default {
    mounted: 
    
        function getServices(){
-        fetch(`${uriBase}/Servicelist`, {
+        fetch(`${uriBase}/api/Servicelist`, {
             method: "GET",
                  }
         ).then(res=> res.json()).then(res => this.services= res)
