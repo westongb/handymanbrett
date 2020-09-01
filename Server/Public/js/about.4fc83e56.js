@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{"20a7":function(t,e,a){},"38aa":function(t,e,a){"use strict";a.r(e);var n=function(){var t=this,e=t.$createElement,a=t._self._c||e;return a("div",{staticClass:"getQuote"},[a("getQuote")],1)},c=[],o=a("6acf"),u={name:"GetQuotePage",components:{getQuote:o["a"]}},s=u,i=(a("c8df"),a("2877")),f=Object(i["a"])(s,n,c,!1,null,"7f6ed517",null);e["default"]=f.exports},c8df:function(t,e,a){"use strict";var n=a("20a7"),c=a.n(n);c.a}}]);
+//# sourceMappingURL=about.4fc83e56.js.map

@@ -24,9 +24,7 @@
             <h2 class="serviceName">{{service.ServiceName}}</h2>
              <p>{{service.ServiceDescription}}</p>
              <a href="/quote"><b-button variant="success" >Get A Quote</b-button></a>
-             
-          
-        </div>
+    </div>
 <!-- 
         <ul v-for="service in services" :key="service">
             <li>{{service}}</li>

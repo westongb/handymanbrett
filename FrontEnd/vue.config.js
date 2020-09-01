@@ -1,5 +1,17 @@
 const path = require('path');
 
 module.exports = {
-  outputDir: path.resolve(__dirname, '../Server/public')
-}
+      publicPath: process.env.NODE_ENV === 'production'
+    ? '/'
+    : '/dev/',
+  outputDir: path.resolve(__dirname, "../Server/public"),
+//   configureWebpack: {
+//     devServer: {
+//       contentBase: "./public",
+//       host: "0.0.0.0",
+//       port: 88,
+//       historyApiFallback: true, // is it enabled ?
+//       inline: true,
+//     },
+//   },
+};

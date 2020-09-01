@@ -1,3 +1,4 @@
+// const Vue = require('vue')
 const express = require ("express");
 const {Pool, Client} = require('pg')
 const app = express();
@@ -6,6 +7,14 @@ const bodyParser = require("body-Parser");
 const serveStatic = require("serve-static");
 const path = require('path');
 const pool = new Pool();
+const history = require('connect-history-api-fallback');
+const environment = process.env.NODE_ENV || "development";
+
+// const template = require('fs').readFileSync('./public/index.html', 'utf-8');
+// const renderer = require('vue-server-renderer').createRenderer({
+//   template
+// });
+
 require('dotenv').config("./process.env")
 const client = new Client({
     user: "postgres",
@@ -15,9 +24,10 @@ const client = new Client({
 
 }) 
 
-const staticFileMiddleware = express.static(path.join(__dirname + '/public'))
 
 const port = process.env.PORT || 5000;
+
+app.set(port)
 
 
 var serviceList = require('./Service_list.json');
@@ -29,11 +39,21 @@ client.connect().then(() => console.log('connected'))
 .catch(err => console.error('connection error', err.stack))
 .finally(()=> client.end)
 
+const staticFileMiddleware = express.static(path.join(__dirname + "/public"));
 
-app.use(serveStatic(path.join(__dirname, '/public')));
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser());
+
+// app.use(serveStatic(path.join(__dirname, '/public')));
+// app.use(/.*/, (req, res) => express.static(path.join(__dirname, "/public")));
+app.use(
+  history({
+    verbose: false
+   
+  })
+);
+
 app.use(staticFileMiddleware);
 
 
@@ -93,15 +113,15 @@ async function readServices() {
     }
 }
 
-
+console.log(environment)
 
 // if(process.env.NODE_ENV === 'production') {
 //   //Static folder
-//   app.use(express.static(_dirname + '/public/'))
-// }
-// handle SPA
+//   app.use(express.static('/public'))
 
-app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+  
+
+// }
 
 
 

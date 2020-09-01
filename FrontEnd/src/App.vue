@@ -9,6 +9,10 @@
 <script>
 
 
+
+
+
+
 import NavBar from "./components/NavBar";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -19,6 +23,8 @@ export default {
   NavBar
   }
 }
+
+
 </script>
 
 <style>
@@ -30,4 +36,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+
+
 </style>
